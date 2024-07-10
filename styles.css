@@ -1,0 +1,294 @@
+/* Container for the whole layout */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    /* margin: 0; */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #4A7A2A;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h1 span {
+    color: red;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar .nav ul li a i {
+    margin-right: 10px;
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-section .categories button {
+    margin-right: 10px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    
+}
+
+.top-section .categories button a{
+    text-decoration: none;
+    color: #4A7A2A;
+}
+
+
+.top-section .item {
+    background-color: #FFB6C1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.top-section .item img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.all-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.all-items .product {
+    background-color: #E0FFFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.all-items .product img {
+    width: 100px;
+    
+}
+
+.all-items .product .price {
+    color: #4A7A2A;
+    font-weight: bold;
+}
+
+/* Menu icon styling */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.cart{
+    text-align: center;
+    background-color: #4A7A2A;
+    margin-top: 100px;
+    padding: 60px 10px 60px 10px;
+    border-radius: 40px;
+  }
+  
+  .cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart ul li {
+    margin: 10px 0px;
+  }
+  
+  .product-detail{
+    text-align: center;
+    background-color: #FF69B4;
+    /* background: linear-gradient(#FF69B4 #4A7A2A); */
+    /* background: linear-gradient( #FF69B4, #a2eda2); */
+    padding: 10px;
+   
+  }
+  
+  #product-image{
+    background-color: #FFC0CB;
+    border-radius: 30px;
+  }
+  #product-price{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+  .product-p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  
+  }
+  #product-name{
+    font-family: "Dancing Script", cursive;
+  }
+  .p-btn{
+    padding: 10px 20px 10px 20px; 
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: none;
+  }
+
+
+
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .dashboard-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px);
+    min-width: 250px;
+  }
+  
+  .dashboard-item h2 {
+    margin: 0 0 10px;
+  }
+  
+  .dashboard-item p,
+  .dashboard-item ul {
+    margin: 0;
+  }
+  
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-top: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+  }
+  
+  .contact-form button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    /* align-content: center; */
+    background: #4A7A2A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background: #FF69B4;
+  }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+        width: 100%;
+    }
+
+    .sidebar.open {
+        display: block;
+    }
+
+    .top-section{
+        display: block;
+        /* padding-bottom: 50px; */
+        
+    }
+    .item{
+      margin-top: 30px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        float:right;
+    }
+
+    /* .menu-icon {
+        display: block;
+    } */
+
+    .nav {
+        display: none;
+    }
+
+    .nav.open {
+        display: block;
+    }
+}
